@@ -3,31 +3,84 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --bg: white;
+  --bgDark: #111827;
+  --textColor: #374151;
+  --paragraph: #9ca3af;
+  --primary: #0ad1bb;
+  --roseRed: #cd4163;
+  --green: #13ce66;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html {
+  scroll-snap-type: mandatory;
+  scroll-behavior: smooth;
+}
+
+section {
+  height: 100vh;
+  scroll-snap-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  max-width: 100vw;
+  overflow-x: hidden;
+  color: var(--textColor);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  transition: all 0.3s ease;
+}
+
+p {
+  color: var(--paragraph);
+  text-align: justify;
+}
+
+.mainContent {
+  background-color: var(--bg);
+  color: var(--textColor);
+}
+
+.mainWrapper {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #d7d7d7;
+  background: -webkit-linear-gradient(0deg, #d7d7d7 0%, #eeeeee 100%);
+  background: linear-gradient(0deg, #d7d7d7 0%, #eeeeee 100%);
+}
+
+.btn {
+  background-color: var(--roseRed);
+  outline: none;
+  border: none;
+  color: white;
+  padding: 5px 30px;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* <!---------Home------------------ */
+.hero {
+  background-image: url("/bg2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
