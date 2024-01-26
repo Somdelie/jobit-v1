@@ -18,7 +18,6 @@ html {
 }
 
 section {
-  height: 100vh;
   scroll-snap-align: center;
 }
 
@@ -43,13 +42,7 @@ a:hover {
   transition: all 0.3s ease;
 }
 
-p {
-  color: var(--paragraph);
-  text-align: justify;
-}
-
 .mainContent {
-  background-color: var(--bg);
   color: var(--textColor);
 }
 
@@ -57,9 +50,6 @@ p {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background: #d7d7d7;
-  background: -webkit-linear-gradient(0deg, #d7d7d7 0%, #eeeeee 100%);
-  background: linear-gradient(0deg, #d7d7d7 0%, #eeeeee 100%);
 }
 
 .btn {
@@ -79,8 +69,8 @@ p {
 
 /* <!---------Home------------------ */
 .hero {
-  background-image: url("/bg2.jpg");
+  background-image: url("/bg4.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
 }

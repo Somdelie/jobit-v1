@@ -2,6 +2,7 @@ import { useState } from "react";
 import { IoClose, IoMenu } from "react-icons/io5";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 const categories = [
   "Web Development",
@@ -45,7 +46,7 @@ const Sidebar = () => {
     >
       <div className=" flex gap-6 items-center">
         <button
-          className="rounded-full flex items-center justify-center w-[30px] h-[30px] text-xl text-white"
+          className="rounded-full flex items-center justify-center w-[30px] h-[30px] text-xl text-green"
           onClick={() => setOpen((prev) => !prev)}
         >
           <IoMenu />
@@ -54,9 +55,17 @@ const Sidebar = () => {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
+          className="flex items-center gap-1"
         >
+          <Image
+            src="/favicon.png"
+            alt="Precedent logo"
+            width="20"
+            height="20"
+            className="mr-2 rounded-sm"
+          ></Image>
           <Link href="/" className="logo text-green font-semibold">
-            Logo
+            Jobit-v1
           </Link>
         </motion.span>
       </div>

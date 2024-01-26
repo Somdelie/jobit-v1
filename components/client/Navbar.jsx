@@ -15,6 +15,7 @@ import { IoMenu } from "react-icons/io5";
 import { motion } from "framer-motion";
 import Sidebar from "./Sidebar";
 import MobileNav from "./MobileNav";
+import useScroll from "@/lib/UseScroll";
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -24,6 +25,8 @@ const Navbar = () => {
   const [user, setUser] = useState({
     firstName: "cautious",
   });
+
+  const scrolled = useScroll(50);
 
   const categories = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -52,19 +55,22 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="sticky left-0 top-0 bg-gray-700 text-white">
+    <nav
+      className={`fixed w-full left-0 top-0 text-gray-700 
+           border-b border-gray-200 bg-white/50 backdrop-blur-xl`}
+    >
       {/* lg devices */}
       <div className="hidden sm:block">
         <div className="flex relative justify-between items-center px-6 py-1 h-[50px]">
           <div className=" flex items-center">
             <Sidebar />
           </div>
-          <div className="flex items-center gap-2 capitalize text-gray-300">
+          <div className="flex items-center gap-2 capitalize text-gray-600">
             {navLinks?.map((link, index) => (
               <Link
                 href={link.link}
                 key={index}
-                className="hover:bg-roseRed px-2 rounded-full"
+                className="hover:bg-roseRed hover:text-white px-2 rounded-full"
               >
                 {link?.title}
               </Link>
@@ -109,7 +115,7 @@ const Navbar = () => {
         </div>
       </div>
       {/* sm devices */}
-      <div className="relative">
+      <div className="relative z-30">
         <MobileNav navLinks={navLinks} />
       </div>
     </nav>
