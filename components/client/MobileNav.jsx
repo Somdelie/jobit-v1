@@ -2,57 +2,30 @@ import { useState } from "react";
 import { IoClose, IoMenu } from "react-icons/io5";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Avatar } from "@mui/material";
+import Image from "next/image";
 
 const MobileNav = ({ navLinks }) => {
   const [open, setOpen] = useState(false);
-  const variants = {
-    open: {
-      clipPath: "circle(1200px at 20px 20px)",
-      transition: {
-        delay: 0.2,
-        type: "spring",
-        stiffness: 20,
-        damping: 40,
-      },
-    },
-    closed: {
-      clipPath: "circle(30px at 40px 40px)",
-      transition: {
-        delay: 0.2,
-        type: "spring",
-        stiffness: 400,
-        damping: 40,
-      },
-    },
-  };
+
   return (
-    <motion.div
-      animate={open ? "open" : "closed"}
-      className="sm:hidden block bg-gray-700 h-[40px] w-[100%] items-center fixed left-0 top-0"
-    >
-      <div className=" flex gap-6 items-center">
+    <div className="">
+      <div className="flex gap-6 items-center">
         <button
-          className="rounded-full flex items-center justify-center w-[30px] h-[30px] text-xl text-white"
+          className="rounded-full flex items-center justify-center w-[30px] h-[30px] text-xl text-green"
           onClick={() => setOpen((prev) => !prev)}
         >
           <IoMenu />
         </button>
-        <motion.span
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          <Link href="/" className="logo text-green font-semibold">
-            Logo
-          </Link>
-        </motion.span>
       </div>
-
       {open && (
         <motion.div
-          variants={variants}
           className="flex w-[80%] h-screen absolute top-0 left-0 flex-col overflow-hidden bg-gray-700"
+          animate={{
+            clipPath: open
+              ? "circle(1200px at 20px 20px)"
+              : "circle(30px at 40px 40px)",
+          }}
+          transition={{ type: "spring", stiffness: 100, damping: 20 }}
         >
           <div className="flex items-center border-b px-4 justify-between h-[40px] text-gray-100">
             <Link href="/" className="logo">
@@ -75,7 +48,7 @@ const MobileNav = ({ navLinks }) => {
           </div>
         </motion.div>
       )}
-    </motion.div>
+    </div>
   );
 };
 

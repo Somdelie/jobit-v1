@@ -21,12 +21,14 @@
     "cSpell.words": [
         "appbar",
         "flowbite",
+        "helpdesk",
         "JOBIT",
         "Photoshop",
         "Remy",
         "searchinput",
         "Somdelie",
-        "tailwindcss"
+        "tailwindcss",
+        "webp"
     ],
     "files.associations": {
         "*.css": "tailwindcss"

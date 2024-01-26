@@ -154,10 +154,12 @@ const About = () => {
         </div>
       </div>
       <div className="p-4 sm:p-0 ">
-        <div className="grid sm:grid-cols-2 gap-6  mt-4">
+        <div className="grid sm:grid-cols-2 gap-6 mt-6">
           <div className="">
             <div className="flex justify-between">
-              <h3 className="">Top Rated Freelancers</h3>{" "}
+              <h3 className="text-3xl text-gray-700 font-semibold">
+                Top Rated Freelancers
+              </h3>{" "}
               <Link href="#" className="text-green flex items-center gap-1">
                 see more
                 <FaArrowRight />

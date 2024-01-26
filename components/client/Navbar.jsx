@@ -11,8 +11,8 @@ import {
   Typography,
 } from "@mui/material";
 import { useState } from "react";
-import { IoMenu } from "react-icons/io5";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Sidebar from "./Sidebar";
 import MobileNav from "./MobileNav";
 import useScroll from "@/lib/UseScroll";
@@ -56,16 +56,36 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-full left-0 top-0 text-gray-700 
+      className={`fixed w-full left-0 top-0 text-gray-700 z-30
            border-b border-gray-200 bg-white/50 backdrop-blur-xl`}
     >
       {/* lg devices */}
-      <div className="hidden sm:block">
+      <div className="">
         <div className="flex relative justify-between items-center px-6 py-1 h-[50px]">
-          <div className=" flex items-center">
-            <Sidebar />
+          {/* sm devices */}
+          <div className="flex items-center gap-3">
+            <div className="z-30 sm:hidden block">
+              <MobileNav navLinks={navLinks} />
+            </div>
+            <motion.span
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              className="flex items-center gap-1"
+            >
+              <Image
+                src="/favicon.png"
+                alt="Precedent logo"
+                width="20"
+                height="20"
+                className=" rounded-sm"
+              ></Image>
+              <Link href="/" className="logo text-green font-semibold">
+                Jobit-v1
+              </Link>
+            </motion.span>
           </div>
-          <div className="flex items-center gap-2 capitalize text-gray-600">
+          <div className=" hidden sm:flex items-center gap-2 capitalize text-gray-600">
             {navLinks?.map((link, index) => (
               <Link
                 href={link.link}
@@ -76,6 +96,7 @@ const Navbar = () => {
               </Link>
             ))}
           </div>
+
           <div className="flex items-center gap-6">
             <div className="icons">icons</div>
             <div className="user">
@@ -113,10 +134,6 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-      </div>
-      {/* sm devices */}
-      <div className="relative z-30">
-        <MobileNav navLinks={navLinks} />
       </div>
     </nav>
   );
