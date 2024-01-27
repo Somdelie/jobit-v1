@@ -31,6 +31,12 @@ module.exports = {
         input: "#374151",
         cognac: "#BE9685",
       },
+      backgroundImage: {
+        "hero-pattern": "url('/bg4.jpg')",
+        "dark-bg": "url('/bg11.jpg')",
+        "light-bg1": "url('/bg9.jpg')",
+        "dark-bg2": "url('/bg5.jpg')",
+      },
     },
   },
   plugins: [require("flowbite/plugin")],

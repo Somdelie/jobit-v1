@@ -8,7 +8,7 @@ const FeatureCard = ({ job }) => {
   return (
     <Link href="#">
       {" "}
-      <div className=" dark:bg-gray-800 border-2 border-transparent transition hover:border-gray-300 rounded-lg p-2 hover:border-2">
+      <div className=" border-2 border-transparent transition hover:border-gray-300 dark:hover:border-gray-700 rounded-lg p-2 hover:border-2">
         <div className="">
           <div className="flex items-center gap-4">
             <Avatar
@@ -21,7 +21,10 @@ const FeatureCard = ({ job }) => {
             </p>
           </div>
           <div className="mt-2">
-            <h3 href="#" className="text-base font-semibold">
+            <h3
+              href="#"
+              className="text-base text-gray-700 dark:text-gray-400 font-semibold"
+            >
               {title}
             </h3>
             <p className="text-gray-500 ">

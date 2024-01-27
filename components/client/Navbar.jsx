@@ -16,6 +16,7 @@ import Image from "next/image";
 import Sidebar from "./Sidebar";
 import MobileNav from "./MobileNav";
 import useScroll from "@/lib/UseScroll";
+import { ThemeSwitcher } from "../ui/ThemeSwitcher";
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -57,7 +58,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed w-full left-0 top-0 text-gray-700 z-30
-           border-b border-gray-200 bg-white/50 backdrop-blur-xl`}
+            dark:bg-gray-700/50 dark:text-gray-400 bg-white/50 backdrop-blur-xl`}
     >
       {/* lg devices */}
       <div className="">
@@ -85,7 +86,7 @@ const Navbar = () => {
               </Link>
             </motion.span>
           </div>
-          <div className=" hidden sm:flex items-center gap-2 capitalize text-gray-600">
+          <div className=" hidden sm:flex items-center gap-2 capitalize text-gray-600 dark:text-gray-400">
             {navLinks?.map((link, index) => (
               <Link
                 href={link.link}
@@ -98,7 +99,9 @@ const Navbar = () => {
           </div>
 
           <div className="flex items-center gap-6">
-            <div className="icons">icons</div>
+            <div className="icons">
+              <ThemeSwitcher />
+            </div>
             <div className="user">
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>

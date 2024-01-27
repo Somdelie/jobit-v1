@@ -121,9 +121,9 @@ const availableJobs = [
 const FeaturedJobs = () => {
   return (
     <div className=" py-4 w-90% sm:w-[90%] mx-auto px-4 sm:px-0">
-      <div className="">
+      <div className="mt-4">
         <div className="flex justify-between">
-          <h3 className="sm:text-3xl text-2xl text-gray-700 font-semibold">
+          <h3 className="sm:text-3xl text-2xl text-gray-700 dark:text-gray-400 font-semibold">
             Available Jobs
           </h3>{" "}
           <Link href="#" className="text-green flex items-center gap-1">

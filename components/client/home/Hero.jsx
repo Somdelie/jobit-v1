@@ -57,18 +57,18 @@ const Hero = () => {
         variants={textVariants}
         initial="initial"
         animate="animate"
-        className="w-90% sm:w-[70%] mx-auto "
+        className="w-90% sm:w-[70%] mx-auto mt-4"
       >
         <motion.h1
           variants={textVariants}
-          className="text-2xl sm:text-3xl md:text-6xl font-bold tracking-[-0.02em] "
+          className="text-2xl sm:text-3xl dark:text-gray-300 md:text-6xl font-bold tracking-[-0.02em] "
         >
           <span className="text-roseRed">Hire the best freelancers</span> for
           any job, online.
         </motion.h1>
         <motion.p
           variants={textVariants}
-          className="mt-6 text-gray-600 md:text-xl"
+          className="mt-8 text-gray-600 dark:text-gray-200 md:text-xl"
         >
           Every day we’re helping thousands of companies to hire the best talent
           from our profiled community of 110 + MLN job seekers and via our large
@@ -77,13 +77,13 @@ const Hero = () => {
         <div className="mx-auto mt-6 text-xs sm:w-1/2 sm:text-base grid sm:grid-cols-2 justify-center gap-2 sm:gap-4">
           <Link
             href="#"
-            className="group flex whitespace-nowrap sm:items-center items-center justify-center gap-2 rounded-full border border-green bg-green px-5 py-2 text-sm text-white transition-colors hover:bg-white hover:text-gray-700"
+            className="group flex whitespace-nowrap sm:items-center items-center justify-center gap-2 rounded-full border border-green bg-green dark:bg-gray-800 px-5 py-2 text-sm text-white transition hover:bg-white hover:text-gray-700"
           >
             <HiRectangleGroup /> Hire a Freelancer
           </Link>
           <Link
             href="#"
-            className="flex whitespace-nowrap sm:items-center items-center justify-center gap-2 rounded-full border border-green bg-white px-5 py-2 text-sm text-gray-700 shadow-md transition-colors hover:border-roseRed"
+            className="flex whitespace-nowrap sm:items-center items-center justify-center gap-2 rounded-full border border-green dark:border-gray-900 dark:text-white dark:bg-gray-700 hover:bg-green dark:hover:bg-gray-600 bg-white px-5 py-2 text-sm text-gray-700 shadow-md transition "
           >
             <FaMoneyCheckAlt /> Become a Freelancer
           </Link>
@@ -94,12 +94,12 @@ const Hero = () => {
         initial="hidden"
         animate="visible"
         variants={variants}
-        className="grid grid-cols-2 sm:grid-cols-4 w-full items-center sm:mt-4 sm:px-[50px] justify-center gap-3"
+        className="grid grid-cols-2 sm:grid-cols-4 w-full items-center sm:mt-6 sm:px-[50px] justify-center gap-3"
       >
         {list?.map((card, index) => (
           <motion.div
             variants={variants}
-            className="overflow-hidden rounded border border-gray-400 h-[100px] bg-white/50 p-4 shadow-md"
+            className="overflow-hidden rounded border border-gray-400 h-[100px] bg-white/50 dark:bg-gray-800 transition p-4 shadow-md"
             key={index}
           >
             <div className="flex items-center text-center">

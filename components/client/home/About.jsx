@@ -124,13 +124,13 @@ const About = () => {
             ))}
           </motion.ul>
         </div>
-        <div className="relative anim mx-auto border-gray-300 dark:border-gray-800 mt-4 sm:mt-0 -z-10 bg-gray-300 dark:bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] sm:h-[300px] w-[300px] sm:w-[600px]">
-          <div className="h-[32px] w-[3px] bg-gray-300 dark:bg-gray-800 absolute -start-[17px] top-[72px] rounded-s-lg"></div>
-          <div className="h-[46px] w-[3px] bg-gray-300 dark:bg-gray-800 absolute -start-[17px] top-[124px] rounded-s-lg"></div>
-          <div className="h-[46px] w-[3px] bg-gray-300 dark:bg-gray-800 absolute -start-[17px] top-[178px] rounded-s-lg"></div>
-          <div className="h-[64px] w-[3px] bg-gray-300 dark:bg-gray-800 absolute -end-[17px] top-[142px] rounded-e-lg"></div>
-          <div className="rounded-[2rem] overflow-hidden h-[572px] w-[272px] sm:h-[272px] sm:w-[572px] bg-white dark:bg-gray-800">
-            <div className="dark:hidden h-[272px] w-[100%] sm:w-[572px] p-4 ">
+        <div className="relative anim mx-auto border-gray-300 dark:border-gray-700 mt-4 sm:mt-0 -z-10 bg-gray-300 dark:bg-gray-700 border-[14px] rounded-[2.5rem] h-[600px] sm:h-[300px] w-[300px] sm:w-[600px]">
+          <div className="h-[32px] w-[3px] bg-gray-300 dark:bg-gray-700 absolute -start-[17px] top-[72px] rounded-s-lg"></div>
+          <div className="h-[46px] w-[3px] bg-gray-300 dark:bg-gray-700 absolute -start-[17px] top-[124px] rounded-s-lg"></div>
+          <div className="h-[46px] w-[3px] bg-gray-300 dark:bg-gray-700 absolute -start-[17px] top-[178px] rounded-s-lg"></div>
+          <div className="h-[64px] w-[3px] bg-gray-300 dark:bg-gray-700 absolute -end-[17px] top-[142px] rounded-e-lg"></div>
+          <div className="rounded-[2rem] overflow-hidden h-[572px] w-[272px] sm:h-[272px] sm:w-[572px] bg-white dark:bg-gray-600">
+            <div className="h-[272px] w-[100%] sm:w-[572px] p-4 ">
               <h1 className="text-center mt-3 text-lg font-semibold text-roseRed">
                 How It Works
               </h1>
