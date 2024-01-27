@@ -1,9 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 import { HiRectangleGroup } from "react-icons/hi2";
 import { FaMoneyCheckAlt } from "react-icons/fa";
+import { useRef } from "react";
 
 const list = [
   {
@@ -29,6 +30,7 @@ const list = [
 ];
 
 const Hero = () => {
+  const ref = useRef();
   const variants = {
     visible: {
       opacity: 1,
@@ -50,6 +52,8 @@ const Hero = () => {
       },
     },
   };
+
+  const isInView = useInView(ref, { margin: "-100px" });
 
   return (
     <div className="flex px-4 sm:px-1 flex-col items-center justify-center min-h-screen gap-6">
@@ -83,7 +87,7 @@ const Hero = () => {
           </Link>
           <Link
             href="#"
-            className="flex whitespace-nowrap sm:items-center items-center justify-center gap-2 rounded-full border border-green dark:border-gray-900 dark:text-white dark:bg-gray-700 hover:bg-green dark:hover:bg-gray-600 bg-white px-5 py-2 text-sm text-gray-700 shadow-md transition "
+            className="flex whitespace-nowrap sm:items-center items-center justify-center gap-2 rounded-full border border-green dark:text-white dark:bg-gray-700 hover:bg-green dark:hover:bg-gray-800 bg-white px-5 py-2 text-sm text-gray-700 shadow-md transition "
           >
             <FaMoneyCheckAlt /> Become a Freelancer
           </Link>
@@ -99,7 +103,7 @@ const Hero = () => {
         {list?.map((card, index) => (
           <motion.div
             variants={variants}
-            className="overflow-hidden rounded border border-gray-400 h-[100px] bg-white/50 dark:bg-gray-800 transition p-4 shadow-md"
+            className="overflow-hidden rounded border border-gray-400 h-[100px] bg-white/50 dark:bg-gray-800 dark:text-gray-400 transition p-4 shadow-md"
             key={index}
           >
             <div className="flex items-center text-center">
@@ -108,15 +112,12 @@ const Hero = () => {
               </h1>
               <span className="text-xs text-green">{card?.span}</span>
             </div>
-            <p className="text-xs sm:text-sm text-gray-600">{card?.desc}</p>
+            <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">
+              {card?.desc}
+            </p>
           </motion.div>
         ))}
       </motion.div>
-      {/* <p className="mt-6 animate-fade-up text-center text-gray-500 md:text-xl">
-        We're different to traditional candidate-search platforms. We deliver
-        the most relevant, qualified candidates on demand through smart
-        programmatic recruiting solutions with our Smart Intuition Technology™.
-      </p> */}
     </div>
   );
 };

@@ -23,6 +23,7 @@ module.exports = {
       colors: {
         primary: "#0AD1BB",
         roseRed: "#CD4163",
+        roseRed2: "#B01E68",
         neonGreen: "#A1F7A1",
         darkBg: "#111827",
         darkCard: "#1F2937",
@@ -34,7 +35,7 @@ module.exports = {
       backgroundImage: {
         "hero-pattern": "url('/bg4.jpg')",
         "dark-bg": "url('/bg11.jpg')",
-        "light-bg1": "url('/bg9.jpg')",
+        "light-bg1": "url('/Cloudy.svg')",
         "dark-bg2": "url('/bg5.jpg')",
       },
     },

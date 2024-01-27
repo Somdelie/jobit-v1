@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const data = [
   {
@@ -22,9 +23,22 @@ const data = [
   // Add more objects as needed
 ];
 
+const variants = {
+  hidden: { y: -100, opacity: 0 },
+  visible: { y: 0, opacity: 1, transition: { duration: 1 } },
+};
+
 const Featured = () => {
+  const ref = useRef();
+  const isInView = useInView(ref, { margin: "-100px" });
   return (
-    <div className="border-t mt-3 w-[90%] mx-auto py-6 border-gray-300">
+    <motion.div
+      initial="hidden"
+      variants={variants}
+      whileInView="visible"
+      animate={isInView && "animation"}
+      className=" mt-3 w-[90%] mx-auto py-6"
+    >
       <h2 className="sm:text-5xl text-white text-2xl font-semibold grid">
         Tap into a<span className="text-roseRed">global talent network</span>
       </h2>
@@ -36,7 +50,9 @@ const Featured = () => {
                 <h3 className="text-xl sm:text-2xl text-[#F7F8F9] font-semibold">
                   {item.title}
                 </h3>
-                <p className="text-[16px] text-gray-300 mt-4">{item.disc}</p>
+                <p className="text-[16px] text-white dark:text-gray-300 mt-4">
+                  {item.disc}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -45,7 +61,7 @@ const Featured = () => {
           <Image width={500} height={500} src="/card.webp" alt="" />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

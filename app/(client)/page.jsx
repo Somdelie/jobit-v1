@@ -14,10 +14,10 @@ export default function Home() {
       <section className="about w-90% sm:w-[90%] mx-auto">
         <About />
       </section>
-      <section className="featured w-full mx-auto">
+      <section className="featured w-full mx-auto overflow-hidden">
         <Featured />
       </section>
-      <section className="featuredJobs">
+      <section className="featuredJobs overflow-hidden">
         <FeaturedJobs />
       </section>
     </div>

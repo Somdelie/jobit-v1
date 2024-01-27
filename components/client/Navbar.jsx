@@ -17,6 +17,8 @@ import Sidebar from "./Sidebar";
 import MobileNav from "./MobileNav";
 import useScroll from "@/lib/UseScroll";
 import { ThemeSwitcher } from "../ui/ThemeSwitcher";
+import { FaUserCircle } from "react-icons/fa";
+import UserMenu from "./UserMenu";
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -102,37 +104,29 @@ const Navbar = () => {
             <div className="icons">
               <ThemeSwitcher />
             </div>
-            <div className="user">
-              <Tooltip title="Open settings">
-                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-                </IconButton>
-              </Tooltip>
+            <div className="flex items-center gap-4">
               {user ? (
-                <Menu
-                  sx={{ mt: "35px" }}
-                  id="menu-appbar"
-                  anchorEl={anchorElUser}
-                  anchorOrigin={{
-                    vertical: "top",
-                    horizontal: "right",
-                  }}
-                  keepMounted
-                  transformOrigin={{
-                    vertical: "top",
-                    horizontal: "right",
-                  }}
-                  open={Boolean(anchorElUser)}
-                  onClose={handleCloseUserMenu}
-                >
-                  {settings.map((setting) => (
-                    <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                      <Typography textAlign="center">{setting}</Typography>
-                    </MenuItem>
-                  ))}
-                </Menu>
+                <div className="flex items-center gap-4">
+                  <Link
+                    href="#"
+                    className="px-2 py-1 bg-roseRed hover:bg-rose-800 rounded text-gray-200"
+                  >
+                    Post a Project
+                  </Link>
+                  <UserMenu user={user} />
+                </div>
               ) : (
-                <div>No user</div>
+                <div className="flex items-center gap-4">
+                  <Link href="#" className="font-semibold">
+                    Log In
+                  </Link>
+                  <Link
+                    href="#"
+                    className="px-2 py-1 bg-roseRed hover:bg-rose-800 rounded text-gray-200"
+                  >
+                    Sign Up
+                  </Link>
+                </div>
               )}
             </div>
           </div>

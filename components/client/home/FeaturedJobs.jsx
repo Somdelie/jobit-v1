@@ -1,7 +1,9 @@
-import React from "react";
+"use client";
 import FeatureCard from "./FeatureCard";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const availableJobs = [
   {
@@ -118,9 +120,22 @@ const availableJobs = [
   },
 ];
 
+const variants = {
+  hidden: { y: -100, opacity: 0 },
+  visible: { y: 0, opacity: 1, transition: { duration: 1 } },
+};
+
 const FeaturedJobs = () => {
+  const ref = useRef();
+  const isInView = useInView(ref, { margin: "-100px" });
   return (
-    <div className=" py-4 w-90% sm:w-[90%] mx-auto px-4 sm:px-0">
+    <motion.div
+      initial="hidden"
+      variants={variants}
+      whileInView="visible"
+      animate={isInView && "animation"}
+      className=" py-4 w-90% sm:w-[90%] mx-auto px-4 sm:px-0"
+    >
       <div className="mt-4">
         <div className="flex justify-between">
           <h3 className="sm:text-3xl text-2xl text-gray-700 dark:text-gray-400 font-semibold">
@@ -141,7 +156,7 @@ const FeaturedJobs = () => {
           <FeatureCard key={job.id} job={job} />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

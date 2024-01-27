@@ -1,8 +1,9 @@
 "use client";
 import { Avatar, Rating } from "@mui/material";
-import { motion } from "framer-motion";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useRef } from "react";
 import { FaArrowRight } from "react-icons/fa";
 
 const listItems = [
@@ -88,6 +89,8 @@ const freelancers = [
 ];
 
 const About = () => {
+  const ref = useRef();
+
   const variants = {
     visible: {
       opacity: 1,
@@ -95,20 +98,56 @@ const About = () => {
     },
     hidden: { opacity: 0 },
   };
+  const variant1 = {
+    initial: {
+      x: 500,
+      opacity: 1,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+        taggerChildren: 0.1,
+      },
+    },
+  };
+  const variant2 = {
+    initial: {
+      x: -300,
+      opacity: 1,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+        taggerChildren: 0.1,
+      },
+    },
+  };
+
+  const isInView = useInView(ref, { margin: "-100px" });
 
   return (
-    <div className="">
-      <div className="grid gap-4 pt-6 sm:grid-cols-2">
-        <div className="p-4 sm:p-0 ">
-          {/* <h1 className="sm:text-[44px] text-2xl font-semibold">
-          Make it real with Freelancer
-        </h1> */}
-          <h2 className="sm:text-4xl text-2xl font-semibold">
+    <div className="py-6 dark:text-gray-400">
+      <motion.div
+        className="grid gap-4 py-6 sm:grid-cols-2"
+        variants={variants}
+        initial="initial"
+        whileInView="visible"
+        animate={isInView && "animation"}
+      >
+        <motion.div className="p-4 sm:p-0 ">
+          <h2 className="sm:text-4xl dark:text-gray-200 text-2xl font-semibold">
             <span className="text-roseRed">Make it real</span> with Freelancer
           </h2>
           <motion.ul
             initial="hidden"
-            animate="visible"
+            whileInView="visible"
+            animate={isInView && "animation"}
             variants={variants}
             className=" mt-4 "
           >
@@ -123,20 +162,29 @@ const About = () => {
               </motion.li>
             ))}
           </motion.ul>
-        </div>
-        <div className="relative anim mx-auto border-gray-300 dark:border-gray-700 mt-4 sm:mt-0 -z-10 bg-gray-300 dark:bg-gray-700 border-[14px] rounded-[2.5rem] h-[600px] sm:h-[300px] w-[300px] sm:w-[600px]">
-          <div className="h-[32px] w-[3px] bg-gray-300 dark:bg-gray-700 absolute -start-[17px] top-[72px] rounded-s-lg"></div>
-          <div className="h-[46px] w-[3px] bg-gray-300 dark:bg-gray-700 absolute -start-[17px] top-[124px] rounded-s-lg"></div>
-          <div className="h-[46px] w-[3px] bg-gray-300 dark:bg-gray-700 absolute -start-[17px] top-[178px] rounded-s-lg"></div>
-          <div className="h-[64px] w-[3px] bg-gray-300 dark:bg-gray-700 absolute -end-[17px] top-[142px] rounded-e-lg"></div>
-          <div className="rounded-[2rem] overflow-hidden h-[572px] w-[272px] sm:h-[272px] sm:w-[572px] bg-white dark:bg-gray-600">
+        </motion.div>
+        <motion.div
+          initial="initial"
+          whileInView="animate"
+          animate={isInView && "animation"}
+          variants={variant1}
+          className="relative mx-auto border-gray-300 dark:border-gray-900 mt-4 sm:mt-0 -z-10 bg-gray-300 dark:bg-gray-900 border-[14px] rounded-[2.5rem] h-[600px] sm:h-[300px] w-[300px] sm:w-[600px]"
+        >
+          <div className="h-[32px] w-[3px] bg-gray-300 dark:bg-gray-900 absolute -start-[17px] top-[72px] rounded-s-lg"></div>
+          <div className="h-[46px] w-[3px] bg-gray-300 dark:bg-gray-900 absolute -start-[17px] top-[124px] rounded-s-lg"></div>
+          <div className="h-[46px] w-[3px] bg-gray-300 dark:bg-gray-900 absolute -start-[17px] top-[178px] rounded-s-lg"></div>
+          <div className="h-[64px] w-[3px] bg-gray-300 dark:bg-gray-900 absolute -end-[17px] top-[142px] rounded-e-lg"></div>
+          <div className="rounded-[2rem] overflow-hidden h-[572px] w-[272px] sm:h-[272px] sm:w-[572px] bg-white dark:bg-gray-700">
             <div className="h-[272px] w-[100%] sm:w-[572px] p-4 ">
               <h1 className="text-center mt-3 text-lg font-semibold text-roseRed">
                 How It Works
               </h1>
-              <div className="grid md:grid-cols-3 pt-6 sm:pt-0 mt-4 sm:mt-2 items-start justify-center gap-3 w-full sm:h-[80%]">
+              <div className="grid md:grid-cols-3 pt-6 dark:text-gray-300 sm:pt-0 mt-4 sm:mt-2 items-start justify-center gap-3 w-full sm:h-[80%]">
                 {data?.map((item, index) => (
-                  <div key={index} className="border-2 p-2 h-full w-[100%]">
+                  <div
+                    key={index}
+                    className="border-2 dark:border-slate-900 p-2 h-full w-[100%]"
+                  >
                     <Image
                       src={item?.icon}
                       alt="Precedent logo"
@@ -151,13 +199,13 @@ const About = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
       <div className="p-4 sm:p-0 ">
         <div className="grid sm:grid-cols-2 gap-6 mt-6">
           <div className="">
             <div className="flex justify-between">
-              <h3 className="text-3xl text-gray-700 font-semibold">
+              <h3 className="text-3xl text-gray-700 dark:text-gray-300 font-semibold">
                 Top Rated Freelancers
               </h3>{" "}
               <Link href="#" className="text-green flex items-center gap-1">
@@ -165,16 +213,22 @@ const About = () => {
                 <FaArrowRight />
               </Link>
             </div>
-            <div className="grid sm:grid-cols-2 mt-3 gap-3">
+            <motion.div
+              variants={variant2}
+              initial="initial"
+              whileInView="animate"
+              animate={isInView && "animation"}
+              className="grid sm:grid-cols-2 mt-3 gap-3"
+            >
               {freelancers?.map((user, index) => (
                 <motion.div
-                  className="w-full flex flex-col bg-gray-300/50 p-3 shadow"
+                  className="w-full flex flex-col bg-gray-300 dark:bg-gray-700 p-3 shadow"
                   key={index}
                 >
-                  <div className="flex items-center border-b border-gray-400 py-2 justify-between">
+                  <div className="flex items-center border-b border-gray-400 dark:border-gray-600 py-2 justify-between">
                     <div className="flex items-center gap-2">
                       <Avatar>{user?.firstName.charAt(0)}</Avatar>
-                      <h3 className="text-lg flex items-center gap-3 text-gray-700 font-semibold">
+                      <h3 className="text-lg flex items-center gap-3 text-gray-700 dark:text-gray-200 font-semibold">
                         {user?.firstName} {user?.surname.charAt(0)}
                       </h3>
                     </div>
@@ -195,16 +249,22 @@ const About = () => {
                     <Rating readOnly value={user?.rating} className="mui" />
                     <Link
                       href="#"
-                      className="bg-green hover:bg-transparent transition hover:text-green hover:border-green border text-gray-100 px-2 py-1 rounded"
+                      className="bg-roseRed2 dark:bg-gray-950 hover:bg-transparent transition hover:text-roseRed2 hover:border-roseRed2 border text-gray-100 px-2 py-1 rounded"
                     >
                       Hire me!
                     </Link>
                   </p>
                 </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
-          <div className="grid sm:grid-cols-2 gap-4">
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            animate={isInView && "animation"}
+            variants={variant1}
+            className="grid sm:grid-cols-2 gap-4 "
+          >
             {data2?.map((item, index) => (
               <motion.div className="w-full" key={index}>
                 <h3 className="text-lg text-roseRed font-semibold">
@@ -213,7 +273,7 @@ const About = () => {
                 <p className="text-sm">{item.disc}</p>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
