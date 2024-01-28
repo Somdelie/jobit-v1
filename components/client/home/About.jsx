@@ -128,6 +128,10 @@ const About = () => {
       },
     },
   };
+  const variants4 = {
+    hidden: { y: 100, opacity: 0, transition: { staggerChildren: 0.3 } },
+    visible: { y: 0, opacity: 1, transition: { duration: 1 } },
+  };
 
   const isInView = useInView(ref, { margin: "-100px" });
 
@@ -164,10 +168,10 @@ const About = () => {
           </motion.ul>
         </motion.div>
         <motion.div
-          initial="initial"
-          whileInView="animate"
+          initial="hidden"
+          variants={variants4}
+          whileInView="visible"
           animate={isInView && "animation"}
-          variants={variant1}
           className="relative mx-auto border-gray-300 dark:border-gray-900 mt-4 sm:mt-0 -z-10 bg-gray-300 dark:bg-gray-900 border-[14px] rounded-[2.5rem] h-[600px] sm:h-[300px] w-[300px] sm:w-[600px]"
         >
           <div className="h-[32px] w-[3px] bg-gray-300 dark:bg-gray-900 absolute -start-[17px] top-[72px] rounded-s-lg"></div>
@@ -259,10 +263,10 @@ const About = () => {
             </motion.div>
           </div>
           <motion.div
-            initial="initial"
-            whileInView="animate"
+            initial="hidden"
+            variants={variants4}
+            whileInView="visible"
             animate={isInView && "animation"}
-            variants={variant1}
             className="grid sm:grid-cols-2 gap-4 overflow-hidden"
           >
             {data2?.map((item, index) => (

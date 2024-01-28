@@ -35,7 +35,7 @@ const Testimonial3 = () => {
               <IoCheckmarkSharp className="text-green" />
             </div>
           </div>
-          <h3 className="my-4">What is required?</h3>
+          <h3 className="my-4 text-lg font-semibold">What is required?</h3>
           <p>To apply you must have an up to date profile and be:</p>
           <ul className="grid gap-1">
             <li>• Email verified</li>
@@ -46,7 +46,9 @@ const Testimonial3 = () => {
         </div>
         <div className="">
           <PiClockCountdownFill className="text-5xl text-green" />
-          <h3 className="my-4">How long does it take?</h3>
+          <h3 className="my-4 text-lg font-semibold ">
+            How long does it take?
+          </h3>
           <p>
             After applying our agents will begin reviewing your application.
             This process is usually complete within 1 to 2 business days.
@@ -54,7 +56,7 @@ const Testimonial3 = () => {
         </div>
         <div className="">
           <FcProcess className="text-5xl text-green" />
-          <h1 className="my-4">What is the process?</h1>
+          <h1 className="my-4 text-lg font-semibold">What is the process?</h1>
           <p>
             After your application has been reviewed, one of our agents will
             contact you to schedule a video interview. If your interview is

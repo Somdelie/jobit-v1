@@ -18,18 +18,18 @@ const Verified = () => {
   const isInView = useInView(ref, { margin: "-100px" });
   return (
     <div>
-      <section className="verified min-h-screen flex px-4 overflow-hidden sm:sm:px-0 flex-col justify-center">
+      <section className="verified min-h-screen flex px-4 overflow-hidden sm:sm:px-0 flex-col gap-2 justify-center">
         <motion.div
           initial="hidden"
           variants={variants}
           whileInView="visible"
           animate={isInView && "animation"}
-          className="sm:max-w-[60%] max-w-[70%] sm:px-16 flex flex-col sm:gap-4 text-white"
+          className="sm:max-w-[60%] max-w-[75%] sm:px-16 flex flex-col sm:gap-4 text-white"
         >
-          <h2 className="text-xl sm:text-[48px] leading-7 font-semibold">
+          <h2 className="text-3xl sm:text-[48px] leading-7 font-semibold">
             Lift your potential.
           </h2>
-          <span className="flex items-center gap-2 sm:gap-4 mt-3 text-[20px] leading-7">
+          <span className="flex items-center gap-2 sm:gap-4 mt-3 text-[18px] my-2 sm:text-[20px] leading-7">
             <Image
               src="/verified.svg"
               alt="Precedent logo"
@@ -46,7 +46,9 @@ const Verified = () => {
             identity that includes a video interview. Get Verified today for
             R99.00
           </p>
-          <span>Verified by Freelancer get instant access to:</span>
+          <span className="my-4">
+            Verified by Freelancer get instant access to:
+          </span>
           <ul className="text-gray-300 text-[16px]">
             <li>- Projects worth 20,500.00 USD+</li>
             <li>- Hourly projects over R500 USD</li>

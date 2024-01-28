@@ -25,7 +25,7 @@ const Testimonial2 = () => {
           </video>
         </div>
         <div className="grid gap-4">
-          <h2 className="text-[32px] font-semibold">
+          <h2 className="sm:text-[32px] text-2xl font-semibold">
             Show clients the person behind the profile!
           </h2>
           <p className="text-[20px]">

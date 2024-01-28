@@ -61,7 +61,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-full left-0 top-0 text-gray-700 z-30 px-8
+      className={`fixed w-full left-0 top-0 text-gray-700 z-30 px-8 
             dark:bg-gray-700/50 dark:text-gray-400 bg-white/50 backdrop-blur-xl`}
     >
       {/* lg devices */}

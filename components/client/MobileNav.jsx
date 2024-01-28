@@ -3,6 +3,7 @@ import { MenuIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
+import { ThemeSwitcher } from "../ui/ThemeSwitcher";
 
 const MobileNav = ({ navLinks, user, pathname }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -74,6 +75,7 @@ const MobileNav = ({ navLinks, user, pathname }) => {
           ) : (
             ""
           )}
+          <ThemeSwitcher />
         </div>
       </div>
     </>
