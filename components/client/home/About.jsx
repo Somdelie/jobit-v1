@@ -205,7 +205,7 @@ const About = () => {
         <div className="grid sm:grid-cols-2 gap-6 mt-6">
           <div className="">
             <div className="flex justify-between">
-              <h3 className="text-3xl text-gray-700 dark:text-gray-300 font-semibold">
+              <h3 className="sm:text-3xl text-lg text-gray-700 dark:text-gray-300 font-semibold">
                 Top Rated Freelancers
               </h3>{" "}
               <Link href="#" className="text-green flex items-center gap-1">

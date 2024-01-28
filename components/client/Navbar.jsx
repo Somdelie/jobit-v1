@@ -4,6 +4,7 @@ import "./home.css";
 import { navLinks } from "@/data/data";
 import {
   Avatar,
+  Badge,
   IconButton,
   Menu,
   MenuItem,
@@ -19,15 +20,14 @@ import useScroll from "@/lib/UseScroll";
 import { ThemeSwitcher } from "../ui/ThemeSwitcher";
 import { FaUserCircle } from "react-icons/fa";
 import UserMenu from "./UserMenu";
+import { Mail, Message } from "@mui/icons-material";
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
-  const [user, setUser] = useState({
-    firstName: "cautious",
-  });
+  const [user, setUser] = useState({ firstName: "cautie" });
 
   const scrolled = useScroll(50);
 
@@ -64,11 +64,11 @@ const Navbar = () => {
     >
       {/* lg devices */}
       <div className="">
-        <div className="flex relative justify-between items-center px-6 py-1 h-[50px]">
+        <div className="flex relative w-full justify-between items-center px-6 py-1 h-[50px]">
           {/* sm devices */}
           <div className="flex items-center gap-3">
             <div className="z-30 sm:hidden block">
-              <MobileNav navLinks={navLinks} />
+              <MobileNav navLinks={navLinks} user={user} />
             </div>
             <motion.span
               initial={{ opacity: 0, scale: 0.5 }}
@@ -101,27 +101,35 @@ const Navbar = () => {
           </div>
 
           <div className="flex items-center gap-6">
-            <div className="icons">
+            <div className="icons hidden sm:block">
               <ThemeSwitcher />
             </div>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2 sm:gap-4">
               {user ? (
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2 sm:gap-4">
                   <Link
                     href="#"
-                    className="px-2 py-1 bg-roseRed hover:bg-rose-800 rounded text-gray-200"
+                    className="px-2 py-1 hidden sm:block bg-roseRed hover:bg-rose-800 rounded text-gray-200"
                   >
                     Post a Project
                   </Link>
+                  <div className="flex items-center gap-2">
+                    <Badge badgeContent={4} color="error">
+                      <Mail />
+                    </Badge>
+                    <Badge badgeContent={4} color="error">
+                      <Message />
+                    </Badge>
+                  </div>
                   <UserMenu user={user} />
                 </div>
               ) : (
                 <div className="flex items-center gap-4">
-                  <Link href="#" className="font-semibold">
+                  <Link href="/login" className="font-semibold">
                     Log In
                   </Link>
                   <Link
-                    href="#"
+                    href="/register"
                     className="px-2 py-1 bg-roseRed hover:bg-rose-800 rounded text-gray-200"
                   >
                     Sign Up

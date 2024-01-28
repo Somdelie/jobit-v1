@@ -19,7 +19,7 @@ export function ThemeSwitcher() {
     <div className="flex items-center border-gray-300 border bg-[#65758569] bg-gray-600 rounded-full w-[49px]">
       <button
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-        className="dark:translate-x-6 transition text-dark-light bg-white dark:text-text justify-center p-1 dark:bg-black rounded-full text-xs flex items-center "
+        className="dark:translate-x-6 transition text-roseRed bg-white dark:text-gray-300 justify-center p-1 dark:bg-gray-900 rounded-full text-xs flex items-center "
       >
         {theme === "light" ? <Moon size={14} /> : <Sun size={14} />}
       </button>
