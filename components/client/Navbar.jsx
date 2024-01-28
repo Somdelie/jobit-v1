@@ -98,6 +98,16 @@ const Navbar = () => {
                 {link?.title}
               </Link>
             ))}
+            {user ? (
+              <Link
+                href="verified"
+                className="hover:bg-roseRed hover:text-white px-2 rounded-full"
+              >
+                Get Verified
+              </Link>
+            ) : (
+              ""
+            )}
           </div>
 
           <div className="flex items-center gap-6">
@@ -114,12 +124,17 @@ const Navbar = () => {
                     Post a Project
                   </Link>
                   <div className="flex items-center gap-2">
-                    <Badge badgeContent={4} color="error">
-                      <Mail />
-                    </Badge>
-                    <Badge badgeContent={4} color="error">
-                      <Message />
-                    </Badge>
+                    <button>
+                      {" "}
+                      <Badge badgeContent={4} color="error">
+                        <Mail />
+                      </Badge>
+                    </button>
+                    <button>
+                      <Badge badgeContent={4} color="error">
+                        <Message />
+                      </Badge>
+                    </button>
                   </div>
                   <UserMenu user={user} />
                 </div>

@@ -215,3 +215,17 @@ a:hover {
 .css-eqeipb-MuiPaper-root-MuiPopover-paper-MuiMenu-paper::before {
   @apply bg-white dark:bg-gray-700;
 }
+
+.css-1q5f5xg-MuiDivider-root::before {
+  border-color: #858585;
+}
+.css-1q5f5xg-MuiDivider-root::after {
+  border-color: #858585;
+}
+
+.verified {
+  background-image: url("/verified-hero-desktop.webp");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}

@@ -63,6 +63,16 @@ const MobileNav = ({ navLinks, user }) => {
                 {link?.title}
               </Link>
             ))}
+            {user ? (
+              <Link
+                href="verified"
+                className="hover:bg-roseRed hover:text-white px-2 rounded-full"
+              >
+                Get Verified
+              </Link>
+            ) : (
+              ""
+            )}
           </div>
           {user ? (
             <div className="mt-4 px-6 flex items-center">
