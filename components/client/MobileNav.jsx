@@ -1,95 +1,82 @@
-import { useState } from "react";
-import { IoClose, IoMenu } from "react-icons/io5";
-import { motion } from "framer-motion";
-import Link from "next/link";
-import { ThemeSwitcher } from "../ui/ThemeSwitcher";
-import UserMenu from "./UserMenu";
+"use client";
+import { MenuIcon } from "lucide-react";
 import Image from "next/image";
-import { Logout } from "@mui/icons-material";
+import Link from "next/link";
+import React, { useState } from "react";
 
-const MobileNav = ({ navLinks, user }) => {
-  const [open, setOpen] = useState(false);
+const MobileNav = ({ navLinks, user, pathname }) => {
+  const [isOpen, setIsOpen] = useState(false);
 
+  const handleMenuOpen = () => {
+    setIsOpen(true);
+  };
   return (
-    <div className="">
-      <div className="flex gap-6 items-center">
-        <button
-          className="rounded-full flex items-center justify-center w-[30px] h-[30px] text-xl text-green"
-          onClick={() => setOpen((prev) => !prev)}
-        >
-          <IoMenu />
-        </button>
-      </div>
-      {open && (
-        <motion.div
-          className="flex w-[80%] h-screen absolute top-0 left-0 flex-col overflow-hidden bg-white dark:bg-gray-700"
-          animate={{
-            clipPath: open
-              ? "circle(1200px at 20px 20px)"
-              : "circle(30px at 40px 40px)",
-          }}
-          transition={{ type: "spring", stiffness: 100, damping: 20 }}
-        >
-          <div className="flex items-center border-b px-4 justify-between h-[40px] text-gray-100">
-            <motion.span
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
-              className="flex items-center gap-1"
-            >
-              <Image
-                src="/favicon.png"
-                alt="Precedent logo"
-                width="20"
-                height="20"
-                className=" rounded-sm"
-              ></Image>
-              <Link href="/" className="logo text-green font-semibold">
-                Jobit-v1
-              </Link>
-            </motion.span>
-            <ThemeSwitcher />
-            <button
-              className="rounded-full flex items-center justify-center w-[20px] h-[20px] text-white bg-roseRed"
-              onClick={() => setOpen((prev) => !prev)}
-            >
-              <IoClose />
-            </button>
-          </div>
+    <>
+      <button
+        onClick={handleMenuOpen}
+        className={isOpen ? "hidden md:hidden" : "block md:hidden"}
+      >
+        <MenuIcon />
+      </button>
 
-          <div className="grid items-center mt-4 gap-2 px-6 capitalize  font-semibold text-gray-500">
-            {navLinks?.map((link, index) => (
-              <Link href={link.link} key={index} className="hover:text-roseRed">
-                {link?.title}
-              </Link>
-            ))}
-            {user ? (
-              <Link href="verified" className="hover:text-roseRed ">
-                Get Verified
-              </Link>
-            ) : (
-              ""
-            )}
-          </div>
+      <div
+        className={
+          !isOpen
+            ? " block items-center -translate-x-full dark:text-slate-100 text-gray-600 fixed left-0 top-0 h-screen w-[80%] bg-white dark:bg-darkCard overflow-y-auto transition-transform"
+            : "block items-center transition shadow bg-white  dark:text-gray-100 text-gray-600 fixed left-0 top-0 h-screen w-[80%] dark:bg-darkCard overflow-y-auto"
+        }
+      >
+        <div className="flex items-center p-4 justify-between bg-white dark:bg-darkCard border-b border-gray-200 dark:border-gray-600">
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/favicon.png"
+              alt="Precedent logo"
+              width="20"
+              height="20"
+              className=" rounded-sm"
+            ></Image>
+            <h1 className="dark:text-white text-[26px] font-semibold">Jobit</h1>
+          </Link>
+          <button
+            className="bg-roseRed w-8 h-8 rounded-full p-2 flex text-white items-center justify-center"
+            onClick={() => setIsOpen(false)}
+          >
+            X
+          </button>
+        </div>
+        <div className="p-6 flex flex-col gap-4 text-[20px]">
+          {navLinks?.map((link) => (
+            <Link
+              key={link.title}
+              href={link.link}
+              className={
+                link.link === pathname
+                  ? "flex space-x-3 items-center border-roseRed text-roseRed transition "
+                  : "flex space-x-3 items-center hover:text-roseRed transition dark:text-slate-100 text-gray-600"
+              }
+              onClick={() => setIsOpen(false)}
+            >
+              <span>{link.title}</span>
+            </Link>
+          ))}
           {user ? (
-            <div className="mt-4 px-6 flex items-center">
-              <Link
-                href="#"
-                className="px-2 py-1 bg-roseRed hover:bg-rose-800 rounded text-gray-200"
-              >
-                Post a Project
-              </Link>
-              <button className="px-5 flex items-center gap-4">
-                <Logout fontSize="small" />
-                Logout
-              </button>
-            </div>
+            <Link
+              href="verified"
+              className={
+                pathname === "/verified"
+                  ? "flex space-x-3 items-center border-roseRed text-roseRed transition "
+                  : "flex space-x-3 items-center hover:text-roseRed transition dark:text-slate-100 text-gray-600"
+              }
+              onClick={() => setIsOpen(false)}
+            >
+              Get Verified
+            </Link>
           ) : (
             ""
           )}
-        </motion.div>
-      )}
-    </div>
+        </div>
+      </div>
+    </>
   );
 };
 

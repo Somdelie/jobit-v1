@@ -132,7 +132,7 @@ const About = () => {
   const isInView = useInView(ref, { margin: "-100px" });
 
   return (
-    <div className="py-6 dark:text-gray-400">
+    <div className="py-6 dark:text-gray-400 overflow-hidden">
       <motion.div
         className="grid gap-4 py-6 sm:grid-cols-2"
         variants={variants}
@@ -140,7 +140,7 @@ const About = () => {
         whileInView="visible"
         animate={isInView && "animation"}
       >
-        <motion.div className="p-4 sm:p-0 ">
+        <motion.div className="p-4 sm:p-0 overflow-hidden">
           <h2 className="sm:text-4xl dark:text-gray-200 text-2xl font-semibold">
             <span className="text-roseRed">Make it real</span> with Freelancer
           </h2>
@@ -201,7 +201,7 @@ const About = () => {
           </div>
         </motion.div>
       </motion.div>
-      <div className="p-4 sm:p-0 ">
+      <div className="p-4 sm:p-0 overflow-hidden">
         <div className="grid sm:grid-cols-2 gap-6 mt-6">
           <div className="">
             <div className="flex justify-between">
@@ -263,7 +263,7 @@ const About = () => {
             whileInView="animate"
             animate={isInView && "animation"}
             variants={variant1}
-            className="grid sm:grid-cols-2 gap-4 "
+            className="grid sm:grid-cols-2 gap-4 overflow-hidden"
           >
             {data2?.map((item, index) => (
               <motion.div className="w-full" key={index}>

@@ -16,7 +16,7 @@ const Testimonial = () => {
   const ref = useRef();
   const isInView = useInView(ref, { margin: "-100px" });
   return (
-    <div>
+    <div className="overflow-hidden">
       <motion.div
         initial="hidden"
         // animate="visible"

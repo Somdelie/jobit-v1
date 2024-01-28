@@ -18,7 +18,7 @@ const Verified = () => {
   const isInView = useInView(ref, { margin: "-100px" });
   return (
     <div>
-      <section className="verified min-h-screen flex px-4 sm:sm:px-0 flex-col justify-center">
+      <section className="verified min-h-screen flex px-4 overflow-hidden sm:sm:px-0 flex-col justify-center">
         <motion.div
           initial="hidden"
           variants={variants}
@@ -59,7 +59,7 @@ const Verified = () => {
           </div>
         </motion.div>
       </section>
-      <section className="sm:max-w-[90%] mx-auto px-4 sm:sm:px-0 py-6">
+      <section className="sm:max-w-[90%] mx-auto px-4 sm:sm:px-0 py-6 overflow-hidden">
         <Testimonial />
       </section>
       <section className="sm:max-w-[90%] px-4 sm:sm:px-0 mx-auto py-6">

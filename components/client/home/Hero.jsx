@@ -56,7 +56,7 @@ const Hero = () => {
   const isInView = useInView(ref, { margin: "-100px" });
 
   return (
-    <div className="flex px-4 sm:px-1 flex-col items-center justify-center min-h-screen gap-6">
+    <div className="flex px-4 sm:px-1 overflow-hidden flex-col items-center justify-center min-h-screen gap-6">
       <motion.div
         variants={textVariants}
         initial="initial"

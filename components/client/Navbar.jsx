@@ -21,6 +21,7 @@ import { ThemeSwitcher } from "../ui/ThemeSwitcher";
 import { FaUserCircle } from "react-icons/fa";
 import UserMenu from "./UserMenu";
 import { Mail, Message } from "@mui/icons-material";
+import { usePathname } from "next/navigation";
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -28,6 +29,7 @@ const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
   const [user, setUser] = useState({ firstName: "cautie" });
+  const pathname = usePathname();
 
   const scrolled = useScroll(50);
 
@@ -59,17 +61,14 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-full left-0 top-0 text-gray-700 z-30
+      className={`fixed w-full left-0 top-0 text-gray-700 z-30 px-8
             dark:bg-gray-700/50 dark:text-gray-400 bg-white/50 backdrop-blur-xl`}
     >
       {/* lg devices */}
-      <div className="">
+      <div className="flex items-center ">
         <div className="flex relative w-full justify-between items-center px-6 py-1 h-[50px]">
           {/* sm devices */}
           <div className="flex items-center gap-3">
-            <div className="z-30 sm:hidden block">
-              <MobileNav navLinks={navLinks} user={user} />
-            </div>
             <motion.span
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -93,7 +92,11 @@ const Navbar = () => {
               <Link
                 href={link.link}
                 key={index}
-                className="hover:bg-roseRed hover:text-white px-2 rounded-full"
+                className={
+                  link.link === pathname
+                    ? "hover:bg-roseRed bg-roseRed text-white px-2 transition rounded-full"
+                    : "hover:bg-roseRed hover:text-white px-2 transition rounded-full"
+                }
               >
                 {link?.title}
               </Link>
@@ -153,6 +156,10 @@ const Navbar = () => {
               )}
             </div>
           </div>
+        </div>
+        {/*------------------------------- Mobile Menu Toggle------------------------- */}
+        <div className="relative md:hidden z-40">
+          <MobileNav navLinks={navLinks} user={user} pathname={pathname} />
         </div>
       </div>
     </nav>

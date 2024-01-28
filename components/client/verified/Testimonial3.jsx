@@ -16,7 +16,7 @@ const Testimonial3 = () => {
   const ref = useRef();
   const isInView = useInView(ref, { margin: "-100px" });
   return (
-    <div className="dark:text-gray-300 grid gap-4">
+    <div className="dark:text-gray-300 grid gap-4 overflow-hidden">
       <h2 className="text-xl sm:text-4xl mb-2 font-semibold">
         Getting started is easy
       </h2>
