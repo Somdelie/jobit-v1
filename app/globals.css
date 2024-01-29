@@ -232,3 +232,30 @@ a:hover {
   background-position: center top;
   background-repeat: no-repeat;
 }
+
+.megaMenu {
+  position: relative;
+  transition: all 2s ease;
+}
+
+.links {
+  display: none;
+  padding: 20px;
+  position: absolute;
+  transition: all 2s ease;
+  top: 20px;
+  left: -35px;
+  @apply bg-white dark:bg-gray-700 rounded;
+}
+
+.megaMenu:hover .links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: all 2s ease;
+}
+
+.search {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}

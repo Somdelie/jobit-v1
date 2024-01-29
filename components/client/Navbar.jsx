@@ -22,6 +22,7 @@ import { FaUserCircle } from "react-icons/fa";
 import UserMenu from "./UserMenu";
 import { Mail, Message } from "@mui/icons-material";
 import { usePathname } from "next/navigation";
+import MegaMenu from "./MegaMenu";
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -101,10 +102,15 @@ const Navbar = () => {
                 {link?.title}
               </Link>
             ))}
+            <MegaMenu />
             {user ? (
               <Link
                 href="verified"
-                className="hover:bg-roseRed hover:text-white px-2 rounded-full"
+                className={
+                  pathname === "/verified"
+                    ? "hover:bg-roseRed bg-roseRed text-white px-2 transition rounded-full"
+                    : "hover:bg-roseRed hover:text-white px-2 transition rounded-full"
+                }
               >
                 Get Verified
               </Link>

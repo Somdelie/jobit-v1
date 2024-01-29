@@ -60,6 +60,28 @@ const MobileNav = ({ navLinks, user, pathname }) => {
               <span>{link.title}</span>
             </Link>
           ))}
+          <Link
+            href="/freelancers"
+            className={
+              pathname === "/freelancers"
+                ? "flex space-x-3 items-center border-roseRed text-roseRed transition "
+                : "flex space-x-3 items-center hover:text-roseRed transition dark:text-slate-100 text-gray-600"
+            }
+            onClick={() => setIsOpen(false)}
+          >
+            Freelancers
+          </Link>
+          <Link
+            href="/projects"
+            className={
+              pathname === "/projects"
+                ? "flex space-x-3 items-center border-roseRed text-roseRed transition "
+                : "flex space-x-3 items-center hover:text-roseRed transition dark:text-slate-100 text-gray-600"
+            }
+            onClick={() => setIsOpen(false)}
+          >
+            Projects
+          </Link>
           {user ? (
             <Link
               href="verified"

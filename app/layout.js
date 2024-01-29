@@ -5,7 +5,13 @@ import { Providers } from "@/context/Providers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "JOBIT",
+  title: {
+    default: "JOBIT",
+    template: "%s | JOBIT",
+  },
+  icons: {
+    icon: "/favicon.png", // /public path
+  },
   description: "Best Freelancers you can find",
 };
 

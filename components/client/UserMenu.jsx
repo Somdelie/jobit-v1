@@ -1,4 +1,4 @@
-import { Dashboard, Logout, Person, PersonAdd } from "@mui/icons-material";
+import { Logout } from "@mui/icons-material";
 import {
   Avatar,
   Box,
@@ -12,11 +12,17 @@ import {
 import { Settings } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import { MdDashboard, MdOutlineAccountBalanceWallet } from "react-icons/md";
+import { BiMoneyWithdraw, BiSupport } from "react-icons/bi";
+import { IoPersonSharp, IoSettings } from "react-icons/io5";
 
 const menu = [
-  { name: "Dashboard", link: "#", icon: <Dashboard fontSize="small" /> },
-  { name: "Settings", link: "#", icon: <Settings fontSize="small" /> },
-  { name: "Account", link: "#", icon: <Person fontSize="small" /> },
+  { name: "Dashboard", link: "#", icon: <MdDashboard /> },
+  { name: "Settings", link: "#", icon: <IoSettings /> },
+  { name: "View Profile", link: "#", icon: <IoPersonSharp /> },
+  { name: "Balance", link: "#", icon: <MdOutlineAccountBalanceWallet /> },
+  { name: "Withdraw Funds", link: "#", icon: <BiMoneyWithdraw /> },
+  { name: "Support", link: "#", icon: <BiSupport /> },
 ];
 const UserMenu = ({ user }) => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -84,7 +90,9 @@ const UserMenu = ({ user }) => {
         <Divider sx={{ mt: 2 }} />
         {menu?.map((link, index) => (
           <MenuItem onClick={handleClose} key={index}>
-            <ListItemIcon sx={{ color: "inherit" }}>{link?.icon}</ListItemIcon>
+            <ListItemIcon sx={{ color: "inherit", fontSize: "20px" }}>
+              {link?.icon}
+            </ListItemIcon>
             <Link href={link?.link}>{link?.name}</Link>
           </MenuItem>
         ))}
