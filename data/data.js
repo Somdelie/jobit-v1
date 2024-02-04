@@ -12,6 +12,10 @@ export const navLinks = [
     link: "/news",
   },
   {
+    title: "Work with Us",
+    link: "/freelancers/create",
+  },
+  {
     title: "Contact",
     link: "/contact",
   },
@@ -160,10 +164,35 @@ export const freelancers = [
 ];
 
 export const categories = [
-  { id: 1, name: "Painter" },
-  { id: 2, name: "Bricklayer" },
-  { id: 3, name: "Shopkeeper" },
-  { id: 4, name: "Graphic Designer" },
+  { id: 1, name: "Air conditioning" },
+  { id: 2, name: "Architects" },
+  { id: 3, name: "Building contractors" },
+  { id: 4, name: "Carports" },
+  { id: 5, name: "Doors" },
+  { id: 6, name: "Electricians" },
+  { id: 7, name: "Fences" },
+  { id: 8, name: "Flooring" },
+  { id: 9, name: "Garage doors" },
+  { id: 10, name: "Gates" },
+  { id: 11, name: "Handymen" },
+  { id: 12, name: "Landscaping and gardening" },
+  { id: 13, name: "Painters" },
+  { id: 14, name: "Paving" },
+  { id: 15, name: "Plumbers" },
+  { id: 16, name: "Roofing" },
+  { id: 17, name: "Solar panels" },
+  { id: 18, name: "Waterproofing" },
+  { id: 19, name: "Windows" },
+  { id: 20, name: "Accountants" },
+  { id: 21, name: "Cleaning services" },
+  { id: 22, name: "Debt collection" },
+  { id: 23, name: "Debt consolidation" },
+  { id: 24, name: "Digital marketing and SEO services" },
+  { id: 25, name: "Moving companies" },
+  { id: 26, name: "Pest control" },
+  { id: 27, name: "Real estate agents" },
+  { id: 28, name: "Security companies" },
+  { id: 29, name: "Web design" },
 ];
 
 export const projects = [
@@ -310,5 +339,141 @@ export const projects = [
     jobType: "Gardener",
     desc: "Looking for a gardener to maintain lawns and gardens for a residential property. Must have knowledge of plant care and landscaping.",
     skills: ["Lawn Maintenance", "Planting", "Landscaping"],
+  },
+];
+
+export const userProjects = [
+  {
+    id: 1,
+    employer: {
+      firstName: "John",
+      lastName: "Doe",
+      // Add more employer details as needed
+    },
+    jobDescription: "Build a website",
+    jobType: "Web Development",
+    jobAmount: 1000, // Amount in currency (e.g., USD)
+    jobStatus: "inProgress", // Can be "Done", "inProgress", "Not Started", etc.
+    address: {
+      street: "123 Main St",
+      city: "Anytown",
+      state: "California",
+      country: "USA",
+      // Add more address details as needed
+    },
+  },
+  {
+    id: 2,
+    employer: {
+      firstName: "Alice",
+      lastName: "Smith",
+      // Add more employer details as needed
+    },
+    jobDescription: "Graphic design for brochure",
+    jobType: "Graphic Design",
+    jobAmount: 500, // Amount in currency (e.g., USD)
+    jobStatus: "Not Started", // Can be "Done", "inProgress", "Not Started", etc.
+    address: {
+      street: "456 Elm St",
+      city: "Another Town",
+      state: "New York",
+      country: "USA",
+      // Add more address details as needed
+    },
+  },
+  {
+    id: 3,
+    employer: {
+      firstName: "Emily",
+      lastName: "Johnson",
+      // Add more employer details as needed
+    },
+    jobDescription: "Mobile app development",
+    jobType: "App Development",
+    jobAmount: 1500, // Amount in currency (e.g., USD)
+    jobStatus: "inProgress", // Can be "Done", "inProgress", "Not Started", etc.
+    address: {
+      street: "789 Oak St",
+      city: "Another City",
+      state: "Texas",
+      country: "USA",
+      // Add more address details as needed
+    },
+  },
+  {
+    id: 4,
+    employer: {
+      firstName: "Michael",
+      lastName: "Brown",
+      // Add more employer details as needed
+    },
+    jobDescription: "Content writing for blog",
+    jobType: "Content Writing",
+    jobAmount: 200, // Amount in currency (e.g., USD)
+    jobStatus: "Done", // Can be "Done", "inProgress", "Not Started", etc.
+    address: {
+      street: "101 Pine St",
+      city: "Some City",
+      state: "Florida",
+      country: "USA",
+      // Add more address details as needed
+    },
+  },
+  {
+    id: 5,
+    employer: {
+      firstName: "Sophia",
+      lastName: "Miller",
+      // Add more employer details as needed
+    },
+    jobDescription: "Logo design for company",
+    jobType: "Graphic Design",
+    jobAmount: 300, // Amount in currency (e.g., USD)
+    jobStatus: "Not Started", // Can be "Done", "inProgress", "Not Started", etc.
+    address: {
+      street: "222 Cedar St",
+      city: "Another City",
+      state: "California",
+      country: "USA",
+      // Add more address details as needed
+    },
+  },
+  {
+    id: 6,
+    employer: {
+      firstName: "David",
+      lastName: "Wilson",
+      // Add more employer details as needed
+    },
+    jobDescription: "SEO optimization for website",
+    jobType: "Digital Marketing",
+    jobAmount: 400, // Amount in currency (e.g., USD)
+    jobStatus: "inProgress", // Can be "Done", "inProgress", "Not Started", etc.
+    address: {
+      street: "444 Maple St",
+      city: "Some Town",
+      state: "Washington",
+      country: "USA",
+      // Add more address details as needed
+    },
+  },
+  {
+    id: 7,
+    employer: {
+      firstName: "Olivia",
+      lastName: "Jones",
+      // Add more employer details as needed
+    },
+    jobDescription: "Data entry for project",
+    jobType: "Data Entry",
+    jobAmount: 100, // Amount in currency (e.g., USD)
+    jobStatus: "Not Started", // Can be "Done", "inProgress", "Not Started", etc.
+    address: {
+      street: "555 Walnut St",
+      city: "Another Town",
+      state: "New Jersey",
+      country: "USA",
+      // Add more address details as needed
+    },
   },
 ];

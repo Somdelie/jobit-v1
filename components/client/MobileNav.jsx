@@ -82,21 +82,12 @@ const MobileNav = ({ navLinks, user, pathname }) => {
           >
             Projects
           </Link>
-          {user ? (
-            <Link
-              href="verified"
-              className={
-                pathname === "/verified"
-                  ? "flex space-x-3 items-center border-roseRed text-roseRed transition "
-                  : "flex space-x-3 items-center hover:text-roseRed transition dark:text-slate-100 text-gray-600"
-              }
-              onClick={() => setIsOpen(false)}
-            >
-              Get Verified
-            </Link>
-          ) : (
-            ""
-          )}
+          <Link
+            href="/projects/create"
+            className="px-2 py-1 hidden sm:block bg-roseRed hover:bg-rose-800 rounded text-gray-200"
+          >
+            Post a Project
+          </Link>
           <ThemeSwitcher />
         </div>
       </div>

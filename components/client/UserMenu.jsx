@@ -17,11 +17,9 @@ import { BiMoneyWithdraw, BiSupport } from "react-icons/bi";
 import { IoPersonSharp, IoSettings } from "react-icons/io5";
 
 const menu = [
-  { name: "Dashboard", link: "#", icon: <MdDashboard /> },
-  { name: "Settings", link: "#", icon: <IoSettings /> },
+  { name: "Dashboard", link: "/user-dashboard", icon: <MdDashboard /> },
+  { name: "Settings", link: "settings", icon: <IoSettings /> },
   { name: "View Profile", link: "#", icon: <IoPersonSharp /> },
-  { name: "Balance", link: "#", icon: <MdOutlineAccountBalanceWallet /> },
-  { name: "Withdraw Funds", link: "#", icon: <BiMoneyWithdraw /> },
   { name: "Support", link: "#", icon: <BiSupport /> },
 ];
 const UserMenu = ({ user }) => {

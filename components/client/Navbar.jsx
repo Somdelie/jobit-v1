@@ -103,20 +103,6 @@ const Navbar = () => {
               </Link>
             ))}
             <MegaMenu />
-            {user ? (
-              <Link
-                href="verified"
-                className={
-                  pathname === "/verified"
-                    ? "hover:bg-roseRed bg-roseRed text-white px-2 transition rounded-full"
-                    : "hover:bg-roseRed hover:text-white px-2 transition rounded-full"
-                }
-              >
-                Get Verified
-              </Link>
-            ) : (
-              ""
-            )}
           </div>
 
           <div className="flex items-center gap-6">
@@ -124,14 +110,14 @@ const Navbar = () => {
               <ThemeSwitcher />
             </div>
             <div className="flex items-center gap-2 sm:gap-4">
+              <Link
+                href="/projects/create"
+                className="px-2 py-1 hidden sm:block bg-roseRed hover:bg-rose-800 rounded text-gray-200"
+              >
+                Post a Project
+              </Link>
               {user ? (
                 <div className="flex items-center gap-2 sm:gap-4">
-                  <Link
-                    href="#"
-                    className="px-2 py-1 hidden sm:block bg-roseRed hover:bg-rose-800 rounded text-gray-200"
-                  >
-                    Post a Project
-                  </Link>
                   <div className="flex items-center gap-2">
                     <button>
                       {" "}
