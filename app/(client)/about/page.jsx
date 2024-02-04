@@ -1,3 +1,4 @@
+import Faqs from "@/components/client/news/Faqs";
 import Members from "@/components/client/news/Members";
 import Image from "next/image";
 import React from "react";
@@ -49,6 +50,7 @@ const About = () => {
         </div>
       </div>
       <Members />
+      <Faqs />
     </section>
   );
 };

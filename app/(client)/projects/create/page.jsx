@@ -90,9 +90,10 @@ const Create = () => {
           <textarea
             id="description"
             rows="4"
-            className="w-full px-0 text-sm text-gray-900 bg-white border-0 dark:bg-gray-700 focus:ring-0 dark:text-white dark:placeholder-gray-400"
-            placeholder="Write a comment..."
+            className="w-full p-4 text-sm text-gray-900 bg-white border-0 dark:bg-gray-700 focus:ring-0 dark:text-white dark:placeholder-gray-400"
+            placeholder="I'm looking for an experienced web developer to create an online..."
             required
+            style={{ resize: "none" }}
           ></textarea>
         </div>
         <button
