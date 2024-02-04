@@ -1,8 +1,6 @@
 "use client";
 import { categories } from "@/data/data";
 import React, { useState } from "react";
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css";
 
 const Create = () => {
   const [value, setValue] = useState(
@@ -89,13 +87,13 @@ const Create = () => {
           >
             Project description
           </label>
-
-          <ReactQuill
-            theme="snow"
-            value={value}
-            onChange={setValue}
-            className="border-gray-700 dark:text-gray-400"
-          />
+          <textarea
+            id="description"
+            rows="4"
+            className="w-full px-0 text-sm text-gray-900 bg-white border-0 dark:bg-gray-700 focus:ring-0 dark:text-white dark:placeholder-gray-400"
+            placeholder="Write a comment..."
+            required
+          ></textarea>
         </div>
         <button
           type="submit"

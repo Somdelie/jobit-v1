@@ -82,12 +82,15 @@ const MobileNav = ({ navLinks, user, pathname }) => {
           >
             Projects
           </Link>
-          <Link
-            href="/projects/create"
-            className="px-2 py-1 hidden sm:block bg-roseRed hover:bg-rose-800 rounded text-gray-200"
-          >
-            Post a Project
-          </Link>
+          <div>
+            <Link
+              href="/projects/create"
+              onClick={() => setIsOpen(false)}
+              className="px-2 py-1 bg-roseRed hover:bg-rose-800 rounded text-gray-200"
+            >
+              Post a Project
+            </Link>
+          </div>
           <ThemeSwitcher />
         </div>
       </div>

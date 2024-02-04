@@ -20,7 +20,6 @@ export const navLinks = [
     link: "/contact",
   },
 ];
-
 export const verified = [
   {
     icon: "/free-trial-membership.svg",
@@ -475,5 +474,111 @@ export const userProjects = [
       country: "USA",
       // Add more address details as needed
     },
+  },
+];
+
+// Array of articles
+export const articles = [
+  {
+    id: 1,
+    title: "The Importance of Regular Exercise",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    createdAt: "2024-02-05T08:00:00Z", // Example date format: ISO 8601
+  },
+  {
+    id: 2,
+    title: "Tips for a Healthy Diet",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    createdAt: "2024-02-05T09:00:00Z", // Example date format: ISO 8601
+  },
+  {
+    id: 3,
+    title: "Stress Management Techniques",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    createdAt: "2024-02-05T10:00:00Z", // Example date format: ISO 8601
+  },
+  {
+    id: 4,
+    title: "Benefits of Meditation",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    createdAt: "2024-02-05T11:00:00Z", // Example date format: ISO 8601
+  },
+  {
+    id: 5,
+    title: "Healthy Sleeping Habits",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    createdAt: "2024-02-05T12:00:00Z", // Example date format: ISO 8601
+  },
+  {
+    id: 6,
+    title: "Importance of Hydration",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    createdAt: "2024-02-05T13:00:00Z", // Example date format: ISO 8601
+  },
+  {
+    id: 7,
+    title: "Mindfulness in Everyday Life",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    createdAt: "2024-02-05T14:00:00Z", // Example date format: ISO 8601
+  },
+  {
+    id: 8,
+    title: "The Power of Positive Thinking",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    createdAt: "2024-02-05T15:00:00Z", // Example date format: ISO 8601
+  },
+  {
+    id: 9,
+    title: "Benefits of a Balanced Diet",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    createdAt: "2024-02-05T16:00:00Z", // Example date format: ISO 8601
+  },
+  {
+    id: 10,
+    title: "Effective Time Management Strategies",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    createdAt: "2024-02-05T17:00:00Z", // Example date format: ISO 8601
+  },
+];
+
+// Array of team members
+export const team = [
+  {
+    name: "Bonnie Green",
+    profilePhoto: "/avatar-3.png",
+    role: "CEO & Web Developer",
+    about:
+      "Bonnie drives the technical strategy of the Jobit platform and brand.",
+  },
+  {
+    name: "John Doe",
+    profilePhoto: "/avatar-3.png",
+    role: "CTO & Software Engineer",
+    about:
+      "John oversees the development and implementation of Jobit's software solutions.",
+  },
+  {
+    name: "Alice Smith",
+    profilePhoto: "/avatar-3.png",
+    role: "UI/UX Designer",
+    about:
+      "Alice is responsible for creating intuitive and visually appealing user interfaces.",
+  },
+  {
+    name: "David Johnson",
+    profilePhoto: "/avatar-3.png",
+    role: "Marketing Manager",
+    about:
+      "David leads the marketing efforts to promote Jobit's products and services.",
   },
 ];

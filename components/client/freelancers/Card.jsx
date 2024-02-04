@@ -23,7 +23,7 @@ const Card = ({ user }) => {
       className=" bg-white dark:bg-gray-700 p-4 dark:text-gray-400"
     >
       <div className="flex gap-2 ">
-        <dv>
+        <div>
           {" "}
           <Image
             src={user?.profilePhoto}
@@ -32,7 +32,7 @@ const Card = ({ user }) => {
             height="100"
             className=" rounded-sm"
           ></Image>
-        </dv>
+        </div>
         <Link href="#">
           <div className="flex items-center justify-between ">
             <div className="flex items-center gap-2 ">
