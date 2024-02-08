@@ -18,13 +18,10 @@ import Sidebar from "./Sidebar";
 import MobileNav from "./MobileNav";
 import useScroll from "@/lib/UseScroll";
 import { ThemeSwitcher } from "../ui/ThemeSwitcher";
-import { FaUserCircle } from "react-icons/fa";
 import UserMenu from "./UserMenu";
 import { Mail, Message } from "@mui/icons-material";
 import { usePathname } from "next/navigation";
 import MegaMenu from "./MegaMenu";
-
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -33,8 +30,6 @@ const Navbar = () => {
   const pathname = usePathname();
 
   const scrolled = useScroll(50);
-
-  const categories = ["Profile", "Account", "Dashboard", "Logout"];
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);

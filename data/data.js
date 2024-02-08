@@ -1,3 +1,14 @@
+import { FaFileInvoiceDollar, FaInbox, FaUserFriends } from "react-icons/fa";
+import { GrProjects } from "react-icons/gr";
+import {
+  MdOutlineDashboardCustomize,
+  MdSettings,
+  MdSubscriptions,
+} from "react-icons/md";
+import { SiFreelancer } from "react-icons/si";
+import { AiFillSchedule } from "react-icons/ai";
+import { TbMessageReport } from "react-icons/tb";
+
 export const navLinks = [
   {
     title: "Home",
@@ -580,5 +591,60 @@ export const team = [
     role: "Marketing Manager",
     about:
       "David leads the marketing efforts to promote Jobit's products and services.",
+  },
+];
+
+export const AdminLinks = [
+  {
+    title: "Dashboard",
+    link: "/admin-panel",
+    icon: <MdOutlineDashboardCustomize />,
+  },
+  {
+    title: "Users",
+    link: "/admin-panel/users",
+    icon: <FaUserFriends />,
+  },
+  {
+    title: "Projects",
+    link: "/admin-panel/projects",
+    icon: <GrProjects />,
+  },
+  {
+    title: "Freelancers",
+    link: "/admin-panel/freelancers",
+    icon: <SiFreelancer />,
+  },
+  {
+    title: "Inbox",
+    link: "/admin-panel/inbox",
+    icon: <FaInbox />,
+  },
+];
+export const Others = [
+  {
+    title: "Settings",
+    link: "/admin-panel/settings",
+    icon: <MdSettings />,
+  },
+  {
+    title: "Schedules",
+    link: "/admin-panel/schedules",
+    icon: <AiFillSchedule />,
+  },
+  {
+    title: "Reports",
+    link: "/admin-panel/reports",
+    icon: <TbMessageReport />,
+  },
+  {
+    title: "Invoices",
+    link: "/admin-panel/invoices",
+    icon: <FaFileInvoiceDollar />,
+  },
+  {
+    title: "Subscriptions",
+    link: "/admin-panel/subscriptions",
+    icon: <MdSubscriptions />,
   },
 ];

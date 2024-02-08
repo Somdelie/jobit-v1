@@ -6,8 +6,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: {
-    default: "JOBIT",
-    template: "%s | JOBIT",
+    default: "Thuso.com",
+    template: "%s | | Thuso.com",
   },
   icons: {
     icon: "/favicon.png", // /public path
