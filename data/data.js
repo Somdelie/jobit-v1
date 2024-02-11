@@ -1,4 +1,9 @@
-import { FaFileInvoiceDollar, FaInbox, FaUserFriends } from "react-icons/fa";
+import {
+  FaFileInvoiceDollar,
+  FaInbox,
+  FaMapMarkedAlt,
+  FaUserFriends,
+} from "react-icons/fa";
 import { GrProjects } from "react-icons/gr";
 import {
   MdOutlineDashboardCustomize,
@@ -606,6 +611,11 @@ export const AdminLinks = [
     icon: <FaUserFriends />,
   },
   {
+    title: "Users Map",
+    link: "/admin-panel/users/map",
+    icon: <FaMapMarkedAlt />,
+  },
+  {
     title: "Projects",
     link: "/admin-panel/projects",
     icon: <GrProjects />,
@@ -648,3 +658,55 @@ export const Others = [
     icon: <MdSubscriptions />,
   },
 ];
+
+export const recentUsers = [
+  {
+    name: "Olivia Martin",
+    email: "olivia.martin@email.com",
+    createdAt: "2024-02-08T12:00:00Z", // Sample createdAt date
+  },
+  {
+    name: "John Doe",
+    email: "john.doe@email.com",
+    createdAt: "2024-02-07T15:30:00Z", // Sample createdAt date
+  },
+  {
+    name: "Jane Smith",
+    email: "jane.smith@email.com",
+    createdAt: "2024-02-06T09:45:00Z", // Sample createdAt date
+  },
+  {
+    name: "Michael Johnson",
+    email: "michael.johnson@email.com",
+    createdAt: "2024-02-05T18:20:00Z", // Sample createdAt date
+  },
+  // Add more users as needed
+];
+
+export const users = [
+  { name: "David", lat: -26.2041, lng: 28.0473 }, // Johannesburg CBD
+  { name: "Sarah", lat: -26.1076, lng: 28.0567 }, // Sandton
+  { name: "James", lat: -26.1935, lng: 28.0339 }, // Rosebank
+  { name: "Linda", lat: -26.0114, lng: 28.0138 }, // Soweto
+  { name: "Peter", lat: -26.1108, lng: 28.0547 }, // Fourways
+  { name: "Emily", lat: -26.1454, lng: 28.0315 }, // Randburg
+  { name: "Michael", lat: -26.2045, lng: 28.0416 }, // Parktown
+  { name: "Sophia", lat: -26.1633, lng: 27.9961 }, // Midrand
+  { name: "Daniel", lat: -26.107, lng: 28.0573 }, // Sandhurst
+  { name: "Jessica", lat: -26.1059, lng: 28.053 }, // Illovo
+  { name: "Ryan", lat: -26.1186, lng: 28.0401 }, // Melrose Arch
+  { name: "Megan", lat: -26.135, lng: 28.0624 }, // Bryanston
+  // Additional users with different provinces
+  { name: "John", lat: -33.9249, lng: 18.4241 }, // Cape Town, Western Cape
+  { name: "Mark", lat: -29.8587, lng: 31.0218 }, // Durban, KwaZulu-Natal
+  { name: "Rachel", lat: -33.964, lng: 22.459 }, // George, Western Cape
+  { name: "Elizabeth", lat: -29.1201, lng: 26.214 },
+  { name: "Andrew", lat: -26.2708, lng: 28.1123 },
+  { name: "William", lat: -33.3528, lng: 22.5597 },
+  { name: "Mary", lat: -26.6296, lng: 27.9712 },
+  { name: "Patricia", lat: -30.5595, lng: 22.9375 },
+  { name: "Jennifer", lat: -28.5693, lng: 29.7763 },
+  { name: "Richard", lat: -26.7107, lng: 27.8378 },
+];
+
+// pk.eyJ1IjoiY2F1dGllbiIsImEiOiJjbHNoamlxZG4wZTJnMmxwbmYyZ3FucTcxIn0.iriupgOP4c4hZjNiVIQ8fA

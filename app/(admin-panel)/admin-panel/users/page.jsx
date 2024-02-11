@@ -1,15 +1,15 @@
+"use client";
 import { Dashboard } from "@mui/icons-material";
 import Link from "next/link";
-import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
 
-export const metadata = {
-  title: "Users",
-};
+// export const metadata = {
+//   title: "Users",
+// };
 
 const Users = () => {
   return (
-    <div>
+    <div className="w-full">
       <ol className="flex w-full items-center font-semibold dark:text-gray-300">
         <li>
           <Link
@@ -21,8 +21,9 @@ const Users = () => {
           </Link>
         </li>
         <IoIosArrowForward className="mt-1" />
-        <li className="capitalize">{metadata?.title}</li>
+        {/* <li className="capitalize">{metadata?.title}</li> */}
       </ol>
+      <div className="h-[80vh] w-full"></div>
     </div>
   );
 };

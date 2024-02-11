@@ -290,3 +290,16 @@ a:hover {
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
+
+.gm-style .gm-style-iw-c {
+  @apply dark:bg-gray-900 p-2 overflow-hidden dark:text-gray-300;
+}
+
+.gm-style .gm-style-iw-d {
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.gm-style-iw {
+  overflow: hidden !important;
+}
