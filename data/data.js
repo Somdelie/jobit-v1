@@ -222,6 +222,8 @@ export const projects = [
     jobType: "E-Commerce Website Development",
     desc: "I'm looking for an experienced web developer to create an online store dedicated to mobile accessories with POS features. Here's an outline of the project requirements: Compatibility: * The store should be exclusively web-based. However need for iOS or Android versions. Key Features: * The website… more",
     skills: ["PHP", "Website Design", "Shopping Carts", "HTML"],
+    address: "33 14th Ave Cnr, Dunvegan St, Sydenham Johannesburg",
+    status: "canceled",
   },
   {
     id: 2,
@@ -234,6 +236,8 @@ export const projects = [
     jobType: "Painter",
     desc: "Seeking a skilled painter for a residential project. Must be able to work with various paint types and finishes. Experience with both interior and exterior painting required.",
     skills: ["Painting", "Color Mixing", "Surface Preparation"],
+    address: "22 5th Street, Parklands, Cape Town",
+    status: "ongoing",
   },
   {
     id: 3,
@@ -246,6 +250,8 @@ export const projects = [
     jobType: "Graphic Designer",
     desc: "Looking for a creative graphic designer to develop branding materials and digital assets for a marketing campaign. Must have experience with Adobe Creative Suite and a strong portfolio showcasing design skills.",
     skills: ["Adobe Creative Suite", "Brand Identity", "Digital Illustration"],
+    address: "45 Greenview Avenue, Randburg, Johannesburg",
+    status: "finished",
   },
   {
     id: 4,
@@ -258,6 +264,8 @@ export const projects = [
     jobType: "Bricklayer",
     desc: "In need of a skilled bricklayer to construct a patio and garden walls. Must be experienced in laying bricks and working with mortar. Ability to create intricate patterns is a plus.",
     skills: ["Bricklaying", "Masonry", "Pattern Design"],
+    address: "8 Willow Lane, Durbanville, Cape Town",
+    status: "finished",
   },
   {
     id: 5,
@@ -270,6 +278,8 @@ export const projects = [
     jobType: "Plumber",
     desc: "Seeking a certified plumber to install fixtures and repair plumbing systems in a commercial building. Must have knowledge of building codes and experience in troubleshooting.",
     skills: ["Plumbing Installation", "Pipe Repair", "Building Codes"],
+    address: "12 Oak Street, Claremont, Cape Town",
+    status: "finished",
   },
   {
     id: 6,
@@ -282,6 +292,8 @@ export const projects = [
     jobType: "Accountant",
     desc: "Seeking an experienced accountant to manage financial records and prepare tax documents for a small business. Must have knowledge of accounting principles and experience with accounting software.",
     skills: ["Financial Reporting", "Tax Preparation", "Accounting Software"],
+    address: "17 Pineapple Road, Umhlanga, Durban",
+    status: "ongoing",
   },
   {
     id: 7,
@@ -294,6 +306,8 @@ export const projects = [
     jobType: "Electrician",
     desc: "Hiring an electrician to install wiring and troubleshoot electrical issues in a residential property. Must be licensed and familiar with safety regulations.",
     skills: ["Electrical Wiring", "Safety Standards", "Troubleshooting"],
+    address: "9 Cherry Avenue, Fourways, Johannesburg",
+    status: "ongoing",
   },
   {
     id: 8,
@@ -306,6 +320,8 @@ export const projects = [
     jobType: "Landscaper",
     desc: "Looking for a skilled landscaper to design and maintain gardens for residential properties. Must have knowledge of plants, irrigation systems, and landscaping techniques.",
     skills: ["Garden Design", "Plant Care", "Irrigation Systems"],
+    address: "33 Maple Street, Stellenbosch, Cape Town",
+    status: "ongoing",
   },
   {
     id: 9,
@@ -318,6 +334,8 @@ export const projects = [
     jobType: "Mechanic",
     desc: "Seeking an experienced mechanic to perform routine maintenance and repairs on vehicles. Must have diagnostic skills and familiarity with automotive systems.",
     skills: ["Automotive Repair", "Diagnostic Tools", "Vehicle Maintenance"],
+    address: "7 Sunflower Road, Bryanston, Johannesburg",
+    status: "ongoing",
   },
   {
     id: 10,
@@ -330,6 +348,8 @@ export const projects = [
     jobType: "Carpenter",
     desc: "In need of a skilled carpenter to build custom furniture and cabinets for a residential project. Must have expertise in woodworking and the ability to interpret blueprints.",
     skills: ["Carpentry", "Woodworking", "Blueprint Interpretation"],
+    address: "14 Rose Lane, Morningside, Durban",
+    status: "ongoing",
   },
   {
     id: 11,
@@ -342,6 +362,8 @@ export const projects = [
     jobType: "Tiler",
     desc: "Seeking a tiler to lay tiles in a bathroom and kitchen renovation project. Must have experience in tile cutting and grouting.",
     skills: ["Tile Installation", "Grouting", "Tile Cutting"],
+    address: "6 Pine Street, Somerset West, Cape Town",
+    status: "ongoing",
   },
   {
     id: 12,
@@ -354,6 +376,8 @@ export const projects = [
     jobType: "Gardener",
     desc: "Looking for a gardener to maintain lawns and gardens for a residential property. Must have knowledge of plant care and landscaping.",
     skills: ["Lawn Maintenance", "Planting", "Landscaping"],
+    address: "11 Magnolia Road, Green Point, Cape Town",
+    status: "ongoing",
   },
 ];
 
@@ -658,7 +682,6 @@ export const Others = [
     icon: <MdSubscriptions />,
   },
 ];
-
 export const recentUsers = [
   {
     name: "Olivia Martin",
@@ -710,3 +733,94 @@ export const users = [
 ];
 
 // pk.eyJ1IjoiY2F1dGllbiIsImEiOiJjbHNoamlxZG4wZTJnMmxwbmYyZ3FucTcxIn0.iriupgOP4c4hZjNiVIQ8fA
+export const allUsers = [
+  {
+    firstName: "John",
+    lastName: "Doe",
+    address: "123 Main St",
+    phoneNumber: "123-456-7890",
+    role: "basic",
+    active: true,
+  },
+  {
+    firstName: "Jane",
+    lastName: "Smith",
+    address: "456 Elm St",
+    phoneNumber: "234-567-8901",
+    role: "basic",
+    active: true,
+  },
+  {
+    firstName: "Michael",
+    lastName: "Johnson",
+    address: "789 Oak St",
+    phoneNumber: "345-678-9012",
+    role: "basic",
+    active: true,
+  },
+  {
+    firstName: "Emily",
+    lastName: "Brown",
+    address: "101 Pine St",
+    phoneNumber: "456-789-0123",
+    role: "basic",
+    active: true,
+  },
+  {
+    firstName: "David",
+    lastName: "Wilson",
+    address: "222 Maple St",
+    phoneNumber: "567-890-1234",
+    role: "basic",
+    active: true,
+  },
+  {
+    firstName: "Sarah",
+    lastName: "Taylor",
+    address: "333 Cedar St",
+    phoneNumber: "678-901-2345",
+    role: "basic",
+    active: true,
+  },
+  {
+    firstName: "Robert",
+    lastName: "Martinez",
+    address: "444 Birch St",
+    phoneNumber: "789-012-3456",
+    role: "basic",
+    active: true,
+  },
+  {
+    firstName: "Jennifer",
+    lastName: "Anderson",
+    address: "555 Walnut St",
+    phoneNumber: "890-123-4567",
+    role: "basic",
+    active: true,
+  },
+  {
+    firstName: "William",
+    lastName: "Thomas",
+    address: "666 Spruce St",
+    phoneNumber: "901-234-5678",
+    role: "basic",
+    active: true,
+  },
+  {
+    firstName: "Laura",
+    lastName: "Garcia",
+    address: "777 Fir St",
+    phoneNumber: "012-345-6789",
+    role: "basic",
+    active: true,
+  },
+  {
+    firstName: "Daniel",
+    lastName: "Lopez",
+    address: "888 Oak St",
+    phoneNumber: "123-456-7890",
+    role: "admin",
+    active: true,
+  },
+  // Add more users as needed
+];

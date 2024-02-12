@@ -1,3 +1,4 @@
+import ProjectsDataTable from "@/components/admin/projects/ProjectsDataTable";
 import { Dashboard } from "@mui/icons-material";
 import Link from "next/link";
 import React from "react";
@@ -10,19 +11,27 @@ export const metadata = {
 const Projects = () => {
   return (
     <div>
-      <ol className="flex w-full items-center font-semibold dark:text-gray-300">
-        <li>
-          <Link
-            href="/admin-panel"
-            className="flex items-center hover:text-roseRed transition gap-1"
-          >
-            <Dashboard />
-            Dashboard
-          </Link>
-        </li>
-        <IoIosArrowForward className="mt-1" />
-        <li className="capitalize">{metadata?.title}</li>
-      </ol>
+      <div className="flex items-center my-2 justify-between">
+        <ol className="flex items-center dark:text-gray-400">
+          <li>
+            <Link
+              href="/admin-panel"
+              className="flex items-center hover:text-roseRed transition gap-1"
+            >
+              <Dashboard />
+              Dashboard
+            </Link>
+          </li>
+          <IoIosArrowForward className="mt-1" />
+          <li className="capitalize">{metadata?.title}</li>
+        </ol>
+        <h2>Manage Users</h2>
+      </div>
+
+      <div className="h-[80vh] w-full">
+        {/* <UsersTable /> */}
+        <ProjectsDataTable />
+      </div>
     </div>
   );
 };

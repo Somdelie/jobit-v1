@@ -7,7 +7,7 @@ const Tabs = ({ setMapCenter }) => {
   // Define an array of tab titles
   const tabTitles = [
     {
-      title: "Eastern Cape",
+      title: "Gauteng",
       coordinates: { latitude: -32.2968, longitude: 26.4194 },
     },
     {
@@ -15,7 +15,7 @@ const Tabs = ({ setMapCenter }) => {
       coordinates: { latitude: -28.4541, longitude: 26.866 },
     },
     {
-      title: "Gauteng",
+      title: "Eastern Cape",
       coordinates: { latitude: -26.2041, longitude: 28.0473 },
     },
     {

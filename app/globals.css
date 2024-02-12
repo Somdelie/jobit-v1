@@ -303,3 +303,25 @@ a:hover {
 .gm-style-iw {
   overflow: hidden !important;
 }
+
+.css-wop1k0-MuiDataGrid-footerContainer {
+  @apply border-none;
+  min-height: 40px !important;
+  max-height: 40px !important;
+}
+
+.css-1iyq7zh-MuiDataGrid-columnHeaders {
+  @apply bg-white text-gray-700 dark:bg-gray-700 dark:text-gray-200 font-semibold;
+}
+
+.data-grid {
+  @apply dark:border-gray-700 w-full border-gray-400 border-2;
+}
+
+.css-az8st9-MuiDataGrid-root .MuiDataGrid-row {
+  @apply dark:hover:bg-gray-600 border-b-2 border-gray-400 hover:bg-gray-300 dark:text-gray-400 text-gray-700 dark:border-gray-700;
+}
+
+.css-az8st9-MuiDataGrid-root .MuiDataGrid-withBorderColor {
+  border: none !important;
+}
