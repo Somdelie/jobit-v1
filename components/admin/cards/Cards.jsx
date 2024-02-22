@@ -8,6 +8,7 @@ import { Avatar, Divider } from "@mui/material";
 import { recentUsers } from "@/data/data";
 import { formatCreatedAt } from "@/lib/convertDate";
 import Map from "@/components/ui/Map";
+import BarCharts from "../BarCharts";
 
 const cards = [
   {
@@ -45,8 +46,9 @@ const Cards = () => {
         ))}
       </div>
       <div className="grid sm:grid-cols-5 gap-4 mt-4">
-        <div className="sm:col-span-3 grow smallCard rounded p-2 h-[350px] border dark:border-gray-700 border-gray-400">
-          <h2 className="font-semibold dark:text-gray-300">Overview</h2>
+        <div className="sm:col-span-3 grow smallCard rounded w-full p-2 h-[350px] border dark:border-gray-700 border-gray-400">
+          <h2 className="font-semibold dark:text-gray-300 mb-4">Overview</h2>
+          <BarCharts />
         </div>
 
         <div className="sm:col-span-2 smallCard p-6 rounded border dark:border-gray-700 border-gray-400">

@@ -22,11 +22,12 @@ import UserMenu from "./UserMenu";
 import { Mail, Message } from "@mui/icons-material";
 import { usePathname } from "next/navigation";
 import MegaMenu from "./MegaMenu";
+import { useSession } from "next-auth/react";
 
 const Navbar = () => {
+  const { data: session } = useSession();
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
-  const [user, setUser] = useState({ firstName: "cautie" });
   const pathname = usePathname();
 
   const scrolled = useScroll(50);
@@ -54,6 +55,8 @@ const Navbar = () => {
     },
     hidden: { opacity: 0 },
   };
+
+  console.log(session);
 
   return (
     <nav
@@ -111,7 +114,7 @@ const Navbar = () => {
               >
                 Post a Project
               </Link>
-              {user ? (
+              {session && session.user ? (
                 <div className="flex items-center gap-2 sm:gap-4">
                   <div className="flex items-center gap-2">
                     <button>
@@ -126,11 +129,12 @@ const Navbar = () => {
                       </Badge>
                     </button>
                   </div>
-                  <UserMenu user={user} />
+                  {/* <UserMenu session={session} /> */}
+                  <p>{session?.user.email}</p>
                 </div>
               ) : (
                 <div className="flex items-center gap-4">
-                  <Link href="/login" className="font-semibold">
+                  <Link href="/api/auth/signin" className="font-semibold">
                     Log In
                   </Link>
                   <Link
@@ -146,7 +150,7 @@ const Navbar = () => {
         </div>
         {/*------------------------------- Mobile Menu Toggle------------------------- */}
         <div className="relative md:hidden z-40">
-          <MobileNav navLinks={navLinks} user={user} pathname={pathname} />
+          {/* <MobileNav navLinks={navLinks} user={user} pathname={pathname} /> */}
         </div>
       </div>
     </nav>

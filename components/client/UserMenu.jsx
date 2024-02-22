@@ -23,7 +23,7 @@ const menu = [
   { name: "View Profile", link: "#", icon: <IoPersonSharp /> },
   { name: "Support", link: "#", icon: <BiSupport /> },
 ];
-const UserMenu = ({ user }) => {
+const UserMenu = ({ session }) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -45,7 +45,7 @@ const UserMenu = ({ user }) => {
             aria-expanded={open ? "true" : undefined}
           >
             <Avatar sx={{ width: 32, height: 32 }}>
-              {user?.firstName.charAt(0)}
+              {/* {session?.firstName.charAt(0)} */}
             </Avatar>
           </IconButton>
         </Tooltip>
